@@ -6,7 +6,9 @@
 	gpgsign = true
 [gpg]
 	program = gpg2
+{{- if eq .chezmoi.hostname "steve-pentland" }}
 [includeIf "gitdir:~/Working/FreshBooks/"]
 	path = ~/Working/FreshBooks/freshbooks-git.inc
+{{- end}}
 [core]
  	excludesfile = /home/steve/.gitignore
