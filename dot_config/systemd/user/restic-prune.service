@@ -1,0 +1,9 @@
+[Unit]
+Description=Run restic prune on my backup snapshots
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/restic forget -q --prune --keep-hourly 24 --keep-daily 7 --keep-weekly 4 --keep-monthly 12 --keep-yearly 1
+
+#[Install]
+#WantedBy=default.target

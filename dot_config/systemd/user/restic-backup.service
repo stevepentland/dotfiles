@@ -1,0 +1,9 @@
+[Unit]
+Description=Run restic backups on my home directory
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/restic backup -q /home/steve/Documents /home/steve/Pictures 
+
+#[Install]
+#WantedBy=default.target

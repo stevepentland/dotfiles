@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for restic backup on home directory
+
+[Timer]
+OnCalendar=*:10:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
