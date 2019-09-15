@@ -48,6 +48,10 @@ bindkey "\eOF" end-of-line
 bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line
 
+#================================FPath===============================#
+if [ -d ~/.zsh_completions ]; then
+	fpath=(~/.zsh_completions $fpath)
+fi
 
 #-------------------------POWERLEVEL9K setup-------------------------#
 POWERLEVEL9K_MODE="nerdfont-complete"
@@ -72,10 +76,8 @@ else
 fi
 
 #------------------------------Sources-------------------------------#
-# shellcheck source=/etc/profile
 source ~/.zplug/init.zsh
 source /etc/profile
-
 #-------------------------------Zplug--------------------------------#
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "pkulev/zsh-rustup-completion"
