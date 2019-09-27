@@ -10,9 +10,9 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.bin
 export PATH=$PATH:$HOME/bin
-export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:/home/steve/.local/share/flatpak/exports/share
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share
 
-if command -v yarn > /dev/null 2&>1;  then
+if (( $+commands[yarn] ));  then
 	export PATH="$PATH:$(yarn global bin)"
 fi
 #-------------------------------Options------------------------------#
