@@ -1,3 +1,4 @@
 {{- if ne .chezmoi.hostname "steve-pentland"}}
 Working/*
+dot_config/environment.d/private_artifactory.conf.tmpl
 {{- end}}
