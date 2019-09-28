@@ -93,6 +93,7 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
 zplug "akarzim/zsh-docker-aliases"
+zplug 'plugins/cargo', from:oh-my-zsh
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "nocttuam/autodotenv"
 zplug 'mfaerevaag/wd', as:command, use:"wd.sh", hook-load:"wd() { . $ZPLUG_REPOS/mfaerevaag/wd/wd.sh }"
@@ -113,6 +114,9 @@ alias vim='nvim'
 alias grep='rg'
 alias python='python3'
 alias pip='pip3'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../../'
 
 if [ -f /usr/bin/bat ]; then
 	alias cat='bat'
@@ -146,9 +150,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 #---------------------------------Editor-----------------------------#
-# TODO: Expand to check whether nvim is installed
-export EDITOR=/usr/bin/nvim
-export VISUAL=/usr/bin/nvim
+if (( $+commands[nvim] )); then
+	export EDITOR=/usr/bin/nvim
+	export VISUAL=/usr/bin/nvim
+fi
 
 #------------------------------Zstyle Changes------------------------#
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
