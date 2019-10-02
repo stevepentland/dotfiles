@@ -2,4 +2,5 @@
 Working/*
 .config/environment.d/10-artifactory.conf
 .config/environment.d/15-gems-artifactory.conf
+.gem/credentials
 {{- end}}
