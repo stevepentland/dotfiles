@@ -1,4 +1,5 @@
 {{- if ne .chezmoi.hostname "steve-pentland"}}
 Working/*
 .config/environment.d/artifactory.conf
+.config/environment.d/gems_artifactory.conf
 {{- end}}

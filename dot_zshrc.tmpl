@@ -15,7 +15,8 @@ export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:$HOME/.local/
 if (( $+commands[yarn] ));  then
 	export PATH="$PATH:$(yarn global bin)"
 fi
-#-------------------------------Options------------------------------#
+
+#------------------------------Options------------------------------#
 
 #=============================Directories============================#
 setopt auto_pushd
@@ -157,3 +158,10 @@ fi
 
 #------------------------------Zstyle Changes------------------------#
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+
+{{- if eq .chezmoi.hostname "steve-pentland" }}
+#--------------------------------Ruby Junk---------------------------#
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+eval "$(rbenv init -)"
+{{- end}}
