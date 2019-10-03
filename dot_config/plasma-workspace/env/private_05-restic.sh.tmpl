@@ -1,0 +1,15 @@
+{{- if eq .chezmoi.hostname "laptop" }}
+{{- with $items := (bitwarden "item" "Restic Settings").fields}}
+export B2_ACCOUNT_ID={{ (index $items 0).value }}
+export B2_ACCOUNT_KEY={{ (index $items 1).value }}
+export RESTIC_REPOSITORY={{ (index $items 2).value }}
+export RESTIC_PASSWORD={{ (index $items 3).value }}
+{{- end}}
+{{- else if eq .chezmoi.hostname "steve-pentland" }}
+{{- with $items := (bitwarden "item" "Restic Work").fields}}
+export B2_ACCOUNT_ID={{ (index $items 0).value }}
+export B2_ACCOUNT_KEY={{ (index $items 1).value }}
+export RESTIC_REPOSITORY={{ (index $items 2).value }}
+export RESTIC_PASSWORD={{ (index $items 3).value }}
+{{- end}}
+{{- end}}

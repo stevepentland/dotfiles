@@ -1,0 +1,4 @@
+{{- with $item := (bitwarden "item" "Artifactory") }}
+export BUNDLE_FRESHBOOKS__JFROG__IO="{{ $item.login.username }}:{{ $item.login.password }}"
+{{- end }}
+
