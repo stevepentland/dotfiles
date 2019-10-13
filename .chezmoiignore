@@ -1,9 +1,7 @@
 {{- if ne .chezmoi.hostname "steve-pentland"}}
 Working/*
 .gem/credentials
-{{- if ne .chezmoi.env.XDG_CURRENT_DESKTOP "KDE" }}
 .config/plasma-workspace
-{{- end }}
 .config/environment.d/10-artifactory.conf
 .config/environment.d/15-gems-artifactory.conf
 {{- end}}
