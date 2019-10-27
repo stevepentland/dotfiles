@@ -1,0 +1,73 @@
+!------------------
+!  URxvt Settings
+!------------------
+
+! scrollbar
+URxvt*scrollBar: false
+URxvt*internalBorder: 0
+
+! disable ctrl-shift
+URxvt*iso14755_52: false
+URxvt*iso14755: false
+
+URxvt*letterSpace: -1
+!----------------
+!  Xft Settings
+!----------------
+
+Xft*dpi: 82
+Xft*antialias:  true
+Xft*hinting:    true
+Xft*rgba:       rgb
+Xft*autohint:   false
+Xft*hintstyle:  hintfull
+Xft*lcdfilter:  lcddefault
+
+!----------------
+!  Font Setting
+!----------------
+
+URxvt.font: xft:UbuntuMono Nerd Font Mono:style=Regular:pixelsize=18
+URxvt.boldFont: xft:UbuntuMono Nerd Font Mono:style=Regular:pixelsize=18
+
+!----------------
+!  Colors
+!----------------
+
+! special
+*.foreground:   #a6a28c
+*.background:   #20201d
+*.cursorColor:  #a6a28c
+
+! black
+*.color0:       #20201d
+*.color8:       #7d7a68
+
+! red
+*.color1:       #d73737
+*.color9:       #d73737
+
+! green
+*.color2:       #60ac39
+*.color10:      #60ac39
+
+! yellow
+*.color3:       #cfb017
+*.color11:      #cfb017
+
+! blue
+*.color4:       #6684e1
+*.color12:      #6684e1
+
+! magenta
+*.color5:       #b854d4
+*.color13:      #b854d4
+
+! cyan
+*.color6:       #1fad83
+*.color14:      #1fad83
+
+! white
+*.color7:       #a6a28c
+*.color15:      #fefbec
+
