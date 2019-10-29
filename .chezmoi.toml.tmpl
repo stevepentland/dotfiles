@@ -1,3 +1,4 @@
-{{- $environments := promptString "environments" -}}
+{{- $mainenvironment := promptString "Main Environment" -}}
 [data]
-    environments = "{{ $environments }}"
+    main_environment = "{{ $mainenvironment }}"
+

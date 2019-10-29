@@ -11,11 +11,27 @@ URxvt*iso14755_52: false
 URxvt*iso14755: false
 
 URxvt*letterSpace: -1
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.cursorBlink: true
+
+!----------------
+!  URxvt Plugins
+!----------------
+URxvt.perl-ext-common: default,tabbed,clipboard
+
+!----------------
+!  URxvt Clipboard
+!----------------
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
 !----------------
 !  Xft Settings
 !----------------
 
-Xft*dpi: 82
+Xft*dpi: 96
 Xft*antialias:  true
 Xft*hinting:    true
 Xft*rgba:       rgb
