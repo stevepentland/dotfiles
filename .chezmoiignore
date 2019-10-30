@@ -4,3 +4,12 @@ Working/*
 .config/plasma-workspace/env/1*
 .config/environment.d/1*
 {{- end}}
+{{- if ne .main_environment "i3" }}
+.i3/*
+{{- end }}
+{{- if ne .main_environment "xmonad" }}
+.xmonad/*
+{{- end }}
+{{- if ne .main_environment "kde" }}
+.config/plasma-workspace
+{{- end }}
