@@ -83,6 +83,10 @@ fi
 #------------------------------Sources-------------------------------#
 source ~/.zplug/init.zsh
 source /etc/profile
+
+for file in ~/.scripts/*; do
+	source "$file"
+done
 #-------------------------------Zplug--------------------------------#
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "pkulev/zsh-rustup-completion"
