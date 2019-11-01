@@ -84,7 +84,7 @@ fi
 source ~/.zplug/init.zsh
 source /etc/profile
 
-if [ -d ~/.scripts ] && [ "$(ls -a ~/.scripts)" ]; then
+if [ -d ~/.scripts ] && [ "$(/usr/bin/ls -A ~/.scripts)" ]; then
 	for file in ~/.scripts/*; do
 		source "$file"
 	done
