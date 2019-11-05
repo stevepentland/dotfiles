@@ -3,7 +3,7 @@ Description=Timer for running restic snapshot prune
 
 [Timer]
 OnCalendar=00/4:30:00
-Persistent=true
+Persistent=false
 
 [Install]
 WantedBy=timers.target

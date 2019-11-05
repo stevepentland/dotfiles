@@ -1,0 +1,6 @@
+[Unit]
+Description=Run restic unlock on repository during downtime
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/restic unlock

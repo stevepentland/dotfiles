@@ -3,7 +3,7 @@ Description=Timer for restic backup on home directory
 
 [Timer]
 OnCalendar=*:10:00
-Persistent=true
+Persistent=false
 
 [Install]
 WantedBy=timers.target

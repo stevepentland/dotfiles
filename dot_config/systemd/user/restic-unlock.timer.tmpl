@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer to run restic unlock regularly
+
+[Timer]
+OnCalendar=Mon..Fri 11,15:30:00
+Persistent=false
+
+[Install]
+WantedBy=timers.target
