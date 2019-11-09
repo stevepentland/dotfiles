@@ -2,7 +2,11 @@
 Description=Timer to run restic unlock regularly
 
 [Timer]
+{{- if eq .chezmoi.hostname "steve-pentland" }}
 OnCalendar=Mon..Fri 11,15:30:00
+{{- else }}
+OnCalendar=11,15:30:00
+{{- end }}
 Persistent=false
 
 [Install]
