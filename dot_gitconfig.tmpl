@@ -5,7 +5,7 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg2
+	program = gpg
 {{- if eq .chezmoi.hostname "steve-pentland" }}
 [includeIf "gitdir:~/Working/FreshBooks/"]
 	path = ~/Working/FreshBooks/freshbooks-git.inc

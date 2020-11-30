@@ -96,13 +96,11 @@ zplug "DarrinTisdale/zsh-aliases-exa"
 zplug "zsh-users/zsh-autosuggestions", use:zsh-autosuggestions.plugin.zsh
 zplug "zsh-users/zsh-completions", use:zsh-completions.plugin.zsh
 zplug "plugins/gitfast", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
 zplug "akarzim/zsh-docker-aliases"
 zplug 'plugins/cargo', from:oh-my-zsh
 zplug "b4b4r07/enhancd", use:init.sh
-#zplug "nocttuam/autodotenv"
 zplug 'mfaerevaag/wd', as:command, use:"wd.sh", hook-load:"wd() { . $ZPLUG_REPOS/mfaerevaag/wd/wd.sh }"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
