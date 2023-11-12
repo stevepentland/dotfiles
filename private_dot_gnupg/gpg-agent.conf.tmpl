@@ -1,0 +1,9 @@
+enable-ssh-support
+default-cache-ttl 60
+max-cache-ttl 120
+{{- $currentDesktop := ((mustRegexFind "XDG_CURRENT_DESKTOP=[a-zA-Z0-9]+" (output "env"))) }}
+{{- if contains "KDE" $currentDesktop }}
+pinentry-program /usr/bin/pinentry-qt
+{{- else if contains "GNOME" $currentDesktop }}
+pinentry-program /usr/bin/pinentry-gnome3
+{{- end }}
