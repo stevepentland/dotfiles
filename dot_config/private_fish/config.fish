@@ -20,13 +20,11 @@ if status is-interactive
     if test -f "$HOME/.asdf/asdf.fish"
         source "$HOME/.asdf/asdf.fish"
     end
-    # source ~/.asdf/asdf.fish
 
     # Add yarn bin to path if installed
     if type -q yarn
         set -x PATH $PATH $(yarn global bin)
     end
-    # set -x PATH $PATH $(yarn global bin)
 
     # gcloud
     if test -f "$HOME/bin/google-cloud-sdk/path.fish.inc"
@@ -42,8 +40,4 @@ if status is-interactive
     if type -q kubectl
         kubectl completion fish | source
     end
-    
-    # if [ -f "$HOME/bin/google-cloud-sdk/path.fish.inc" ]; . "$HOME/bin/google-cloud-sdk/path.fish.inc"; end
-    # if [ -f "$HOME/.work/env.extra.fish"]; . "$HOME/.work/env.extra.fish"; end
-    # kubectl completion fish | source
 end
